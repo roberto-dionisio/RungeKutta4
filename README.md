@@ -33,27 +33,3 @@ To use this implementation, follow these steps:
 
 5. Access the solution at each time step for further analysis.
 
-Here's an example in Python:
-
-```python
-# Define your ODE function f(t, y) here
-
-def runge_kutta_4th_order(f, t0, y0, h, num_steps):
-    t = t0
-    y = y0
-    for _ in range(num_steps):
-        k1 = h * f(t, y)
-        k2 = h * f(t + h/2, y + k1/2)
-        k3 = h * f(t + h/2, y + k2/2)
-        k4 = h * f(t + h, y + k3)
-        y = y + (k1 + 2*k2 + 2*k3 + k4)/6
-        t = t + h
-        # Store or process y at each time step as needed
-    return y
-
-# Usage example
-t0 = 0
-y0 = 1
-h = 0.1
-num_steps = 100
-solution = runge_kutta_4th_order(y_prime, t0, y0, h, num_steps)
