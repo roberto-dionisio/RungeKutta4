@@ -33,3 +33,6 @@ To use this implementation, follow these steps:
 
 5. Access the solution at each time step for further analysis.
 ---
+### Further changes (yet to be implemented)
+1. *Generalise the algorithm to vectorial ODEs*
+2. *Implementing a way to chose the best 'h'*
